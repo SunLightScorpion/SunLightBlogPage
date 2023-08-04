@@ -54,7 +54,7 @@ if ($result = $query) {
         }
 
         if ($current_page < $total_pages) {
-            echo "<a href='index.php?page=" . ($current_page + 1) . "'> nächste</a>";
+            echo "<a href='index.php?page=" . ($current_page + 1) . "'>, nächste</a>";
         }
 
         echo "</div>";
