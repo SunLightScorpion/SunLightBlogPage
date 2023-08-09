@@ -12,6 +12,7 @@
 <header>
     <h1>Homepage</h1>
 </header>
+
 <nav>
     <ul>
         <li><a href="index.php" class="active">Hauptseite</a></li>
@@ -19,18 +20,25 @@
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
+    <div class="button-container">
+        <form action="login.php" method="post">
+            <button type="submit">Anmelden</button>
+        </form>
+        <form action="register.php" method="post">
+            <button type="submit">Registrieren</button>
+        </form>
+    </div>
 </nav>
 
 <div class="content">
-<?php
+    <?php
     @include 'util.php';
 
     $per_page = 5;
-    $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $current_page = $_GET['page'] ?? 1;
     $offset = ($current_page - 1) * $per_page;
 
-    function get_total_blog_posts()
-    {
+    function get_total_blog_posts() {
         $query = mysqli_query(database_blogpost(), "SELECT COUNT(*) as total FROM blog_posts");
         $data = mysqli_fetch_assoc($query);
         return $data['total'];
@@ -78,7 +86,7 @@
             echo "</div>";
         }
     }
-?>
+    ?>
 </div>
 
 </body>

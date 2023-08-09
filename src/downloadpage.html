@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Downloads</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
     <link href="sunlight.png" rel="icon">
 </head>
 <body>
 
 <header>
-    <h1>Download Page</h1>
+    <h1>Downloads</h1>
 </header>
+
 <nav>
     <ul>
         <li><a href="index.php">Hauptseite</a></li>
-        <li><a href="downloadpage.html" class="active">Downloads</a></li>
+        <li><a class="active" href="downloadpage.html">Downloads</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
+    <div class="button-container">
+        <form action="login.php" method="post">
+            <button type="submit">Anmelden</button>
+        </form>
+        <form action="register.php" method="post">
+            <button type="submit">Registrieren</button>
+        </form>
+    </div>
 </nav>
 
 <div class="content">
     <center>
         <form action="firedownload.php" method="post" target="_blank">
-            <select name="downloads" id="downloads">
-                <option value="choose">Choose the download!</option>
+            <select id="downloads" name="downloads">
+                <option value="choose">Wähle den Download aus!</option>
             </select>
             <br>
-            <button type="submit">Download</button>
+            <button type="submit">Herunterladen</button>
         </form>
     </center>
+
+    <div class="explanation">
+        <h2>Open Source Downloads</h2>
+        <p>Diese Downloads werden als Open Source Software zur Verfügung gestellt, das bedeutet, du kannst sie gemäß der
+            entsprechenden Lizenzen frei verwenden, anpassen und verbreiten.</p>
+        <p>Weitere Informationen und um beizutragen, besuche unser <a href="https://github.com/SunLightScorpion"
+                                                                      target="_blank">GitHub-Repository</a>.</p>
+        <p>Wenn du Probleme hast oder Vorschläge machen möchtest, melde sie bitte auf unserem <a
+                href="https://github.com/SunLightScorpion/bugtracker" target="_blank">Bugtracker</a>.</p>
+    </div>
+
 </div>
 
 <script src="options.js"></script>

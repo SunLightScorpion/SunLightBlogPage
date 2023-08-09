@@ -11,31 +11,31 @@
 
 <?php
 
-    if($_POST["downloads"] == "choose") {
-        echo "<h1>Download doesnt exist, please select a download!</h1>";
+if ($_POST["downloads"] == "choose") {
+    echo "<h1>Download doesnt exist, please select a download!</h1>";
+} else {
+
+    $targetDownload = $_POST['downloads'];
+
+    if (file_exists($targetDownload)) {
+
+        echo "<h1>Download file $targetDownload</h1>";
+
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename=' . basename($targetDownload));
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($targetDownload));
+
+        readfile($targetDownload);
     } else {
-
-        $targetDownload = $_POST['downloads'];
-
-        if(file_exists($targetDownload)){
-
-            echo "<h1>Download file $targetDownload</h1>";
-
-            header('Content-Description: File Transfer');
-            header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename=' . basename($targetDownload));
-            header('Content-Transfer-Encoding: binary');
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: ' . filesize($targetDownload));
-
-            readfile($targetDownload);
-        } else {
-            die('<h1>File not found.</h1>');
-        }
-
+        die('<h1>File not found.</h1>');
     }
+
+}
 
 ?>
 

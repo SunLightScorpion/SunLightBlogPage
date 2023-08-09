@@ -3,25 +3,30 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #333; 
-    color: #fff;
+    background-color: #121212; /* Dunkles Grau als Hintergrundfarbe */
+    color: #fff; /* Weiß für den Text */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #2196F3; /* Hellgrau für den Header "Mein Blog" */
     text-align: center;
     padding: 20px;
 }
 
 h1 {
     margin: 0;
-    color: #fff;
+    color: #fff; /* Weiß für den Text */
+}
+
+nav {
+    margin-left: 20px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-right: 20px; /* Hier das Stück nach rechts */
 }
 
 nav ul li {
@@ -32,31 +37,42 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: #4CAF50; 
+    color: #ddd; /* Hellgrau für die Link-Farbe */
+    transition: color 0.3s ease; /* Sanfter Übergang der Farbe beim Hovern */
 }
 
 nav ul li a.active {
-    background-color: #444; 
-    color: #fff; 
+    background-color: #333; /* Dunkelgrau für den Hintergrund */
+    color: #fff; /* Weiß für die Schriftfarbe */
+    border-radius: 4px;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    color: #fff; 
+    color: #2196F3; /* Blau für die Link-Farbe beim Hovern */
+}
+
+.content {
+    margin: 20px;
+    background-color: #1E1E1E; /* Dunkleres Grau für den Hintergrund */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stärkere Schatten für das Content-Feld */
 }
 
 .post {
-    border-bottom: 1px solid #555; 
-    padding: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333; /* Dunkleres Grau für die Trennlinien */
+}
+
+.post:last-child {
+    border-bottom: none; /* Keine Trennlinie am letzten Beitrag */
 }
 
 .post h2 {
     margin-top: 0;
-}
-
-.post p {
-    margin-bottom: 0;
+    color: #fff; /* Weiß für den Text */
 }
 
 .pagination {
@@ -67,18 +83,46 @@ nav ul li a:hover {
 
 .pagination a,
 .pagination span {
-    padding: 5px 10px;
+    padding: 8px 12px;
     text-decoration: none;
-    color: #fff; 
-    border: 1px solid #555; 
+    color: #2196F3; /* Blau für den Text */
+    border: 1px solid #2196F3; /* Blau für den Rahmen */
     border-radius: 4px;
+    margin: 0 5px; /* Abstand zwischen den Elementen */
 }
 
 .pagination a:hover {
-    background-color: #444;
+    background-color: #2196F3; /* Blau beim Hovern */
+    color: #fff; /* Weiß für den Text */
 }
 
 .pagination .current {
-    background-color: #4CAF50; 
-    color: #fff;
+    background-color: #2196F3; /* Blau für die aktuelle Seite */
+    color: #fff; /* Weiß für den Text */
+    border: 1px solid #2196F3; /* Blau für den Rahmen */
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 0 5px; /* Abstand zum vorherigen Element */
+}
+
+.button-container {
+    display: flex;
+}
+
+.button-container form {
+    margin-right: 10px;
+}
+
+.button-container button {
+    padding: 8px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #1976D2;
 }
