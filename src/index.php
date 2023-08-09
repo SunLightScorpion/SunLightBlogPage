@@ -52,12 +52,10 @@
         if ($total_pages > 1) {
             echo "<div class='pagination'>";
 
-            // Zeige den Link zur vorherigen Seite
             if ($current_page > 1) {
-                echo "<a href='index.php?page=" . ($current_page - 1) . "'>vorherige</a>";
+                echo "<a href='index.php?page=" . ($current_page - 1) . "'>Prev</a>";
             }
 
-            // Zeige maximal 5 Seiten plus das sechste Element (wenn mehr als 5 Seiten vorhanden sind)
             $start = max(1, $current_page - 2);
             $end = min($start + 4, $total_pages);
 
@@ -69,14 +67,12 @@
                 }
             }
 
-            // Zeige das sechste Element, wenn mehr als 5 Seiten vorhanden sind
             if ($total_pages > 5 && $current_page < $total_pages - 1) {
                 echo "<a href='index.php?page=" . $total_pages . "'>$total_pages</a>";
             }
 
-            // Zeige den Link zur nächsten Seite
             if ($current_page < $total_pages) {
-                echo "<a href='index.php?page=" . ($current_page + 1) . "'>nächste</a>";
+                echo "<a href='index.php?page=" . ($current_page + 1) . "'>Next</a>";
             }
 
             echo "</div>";
