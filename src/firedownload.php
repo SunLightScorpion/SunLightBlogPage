@@ -17,9 +17,9 @@
 
         $targetDownload = $_POST['downloads'];
 
-        echo "<h1>Download file $targetDownload</h1>";
-
         if(file_exists($targetDownload)){
+
+            echo "<h1>Download file $targetDownload</h1>";
 
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
