@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="sunlight.png" rel="icon">
+</head>
+<body>
+
+<header>
+    <h1>Download Page</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.php">Hauptseite</a></li>
+        <li><a href="downloadpage.html" class="active">Downloadpage</a></li>
+        <li><a href="https://github.com/dein-github-link">Github</a></li>
+        <li><a href="https://discord.com/invite/dein-discord-link">Discord</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <center>
+        <form action="firedownload.php" method="post" target="_blank">
+            <select name="downloads" id="downloads">
+                <option value="choose">Choose the download!</option>
+            </select>
+            <br>
+            <button type="submit">Download</button>
+        </form>
+    </center>
+</div>
+
+<script src="options.js"></script>
+
+</body>
+</html>

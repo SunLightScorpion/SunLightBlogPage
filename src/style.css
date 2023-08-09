@@ -1,27 +1,53 @@
-/* style.css */
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #333; /* Dunkelgrau als Hintergrundfarbe */
-    color: #fff; /* Weiß für den Text */
+    background-color: #333; 
+    color: #fff;
 }
 
 header {
-    background-color: #4CAF50; /* Hellgrün für den Header "Mein Blog" */
+    background-color: #4CAF50;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
     margin: 0;
-    color: #fff; /* Weiß für den Text "Mein Blog" */
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #4CAF50; 
+}
+
+nav ul li a.active {
+    background-color: #444; 
+    color: #fff; 
+}
+
+nav ul li a:hover {
+    color: #fff; 
 }
 
 .post {
-    border-bottom: 1px solid #555; /* Etwas helleres Grau für die Trennlinien */
+    border-bottom: 1px solid #555; 
     padding: 10px;
 }
 
@@ -43,16 +69,16 @@ h1 {
 .pagination span {
     padding: 5px 10px;
     text-decoration: none;
-    color: #fff; /* Weiß für den Text */
-    border: 1px solid #555; /* Etwas helleres Grau für den Rahmen */
+    color: #fff; 
+    border: 1px solid #555; 
     border-radius: 4px;
 }
 
 .pagination a:hover {
-    background-color: #444; /* Dunkleres Grau beim Hovern */
+    background-color: #444;
 }
 
 .pagination .current {
-    background-color: #4CAF50; /* Hellgrün für die aktuelle Seite */
-    color: #fff; /* Weiß für den Text */
+    background-color: #4CAF50; 
+    color: #fff;
 }
