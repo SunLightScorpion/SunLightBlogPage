@@ -12,12 +12,12 @@
 <?php
 
     if($_POST["downloads"] == "choose") {
-        echo "Download doesnt exist, please select a download!";
+        echo "<h1>Download doesnt exist, please select a download!</h1>";
     } else {
 
         $targetDownload = $_POST['downloads'];
 
-        echo "Download file $targetDownload";
+        echo "<h1>Download file $targetDownload</h1>";
 
         if(file_exists($targetDownload)){
 
@@ -32,7 +32,7 @@
 
             readfile($targetDownload);
         } else {
-            die('File not found.');
+            die('<h1>File not found.</h1>');
         }
 
     }
