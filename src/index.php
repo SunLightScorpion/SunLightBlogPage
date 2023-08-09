@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Start</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
     <link href="sunlight.png" rel="icon">
 </head>
@@ -15,9 +15,9 @@
 <nav>
     <ul>
         <li><a href="index.php" class="active">Hauptseite</a></li>
-        <li><a href="downloadpage.html">Downloadpage</a></li>
-        <li><a href="https://github.com/dein-github-link">Github</a></li>
-        <li><a href="https://discord.com/invite/dein-discord-link">Discord</a></li>
+        <li><a href="downloadpage.html">Downloads</a></li>
+        <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
+        <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
 </nav>
 
