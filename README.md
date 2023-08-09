@@ -1,4 +1,4 @@
 # SunLightBlogPage
-Blog page from and for SunLightScorpion
+Our Homepage, open source
 
 Test Site: https://sunlightscorpion.de/testblog/
