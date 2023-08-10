@@ -34,7 +34,7 @@
 
     if ($query) {
         echo "<table>";
-        echo "<tr><th>BugID</th><th>Beschreibung</th></tr>";
+        echo "<tr><th>Ticket-ID</th><th>Beschreibung</th></tr>";
 
         foreach ($query as $bug) {
             echo "<tr>";
