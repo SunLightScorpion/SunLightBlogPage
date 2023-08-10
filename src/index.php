@@ -17,7 +17,7 @@
     <ul>
         <li><a href="index.php" class="active">Hauptseite</a></li>
         <li><a href="tickets.php">Ticket Ansicht</a></li>
-        <li><a href="downloadpage.html">Downloads</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>

@@ -6,6 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = $_POST['description'];
     $reporter_name = $_POST['reporter_name'];
 
+    $description = nl2br($description);
+
     $query = mysqli_query(database_blogpost(), "INSERT INTO bug_reports (title, description, reporter_name, status, created_at) 
                                                  VALUES ('$title', '$description', '$reporter_name', 'Open', NOW())");
 

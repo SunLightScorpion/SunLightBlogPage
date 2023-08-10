@@ -16,7 +16,7 @@
     <ul>
         <li><a href="index.php">Hauptseite</a></li>
         <li><a href="tickets.php" class="active">Ticket Ansicht</a></li>
-        <li><a href="downloadpage.html">Downloads</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
@@ -34,11 +34,11 @@
 
     if ($query) {
         echo "<table>";
-        echo "<tr><th>Ticket-ID</th><th>Beschreibung</th></tr>";
+        echo "<tr><th>BugID</th><th>Beschreibung</th></tr>";
 
         foreach ($query as $bug) {
             echo "<tr>";
-            echo "<td>" . $bug['id'] . "</td>";
+            echo "<td><a href='bug_detail.php?bug_id=" . $bug['id'] . "' class='bug-link'>" . $bug['id'] . "</a></td>";
             echo "<td>" . $bug['title'] . "</td>";
             echo "</tr>";
         }
