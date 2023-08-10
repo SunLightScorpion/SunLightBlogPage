@@ -38,7 +38,7 @@
 
         foreach ($query as $bug) {
             echo "<tr>";
-            echo "<td><a href='bug_detail.php?bug_id=" . $bug['id'] . "' class='bug-link'>" . $bug['id'] . "</a></td>";
+            echo "<td><a href='ticket_detail.php?bug_id=" . $bug['id'] . "' class='bug-link'>" . $bug['id'] . "</a></td>";
             echo "<td>" . $bug['title'] . "</td>";
             echo "</tr>";
         }
