@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<header>
+<div class="header-image">
     <h1>Ticket Ansicht</h1>
-</header>
+</div>
+
 <nav>
     <ul>
         <li><a href="index.php">Hauptseite</a></li>
@@ -45,7 +46,7 @@
 
         echo "</table>";
 
-        $total_bugs = mysqli_query(database_bugtracker(), "SELECT COUNT(*) as total FROM bug_reports");
+        $total_bugs = mysqli_query(database_blogpost(), "SELECT COUNT(*) as total FROM bug_reports");
         $total_bugs = mysqli_fetch_assoc($total_bugs)['total'];
         $total_pages = ceil($total_bugs / $per_page);
 

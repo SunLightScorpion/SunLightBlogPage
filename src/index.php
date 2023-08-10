@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<header>
+<div class="header-image">
     <h1>Homepage</h1>
-</header>
+</div>
+
 
 <nav>
     <ul>

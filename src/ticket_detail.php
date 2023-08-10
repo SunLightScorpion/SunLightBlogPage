@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<header>
+<div class="header-image">
     <h1>Bug Detail</h1>
-</header>
+</div>
+
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>

@@ -126,3 +126,13 @@ nav ul li a:hover {
 .button-container button:hover {
     background-color: #1976D2;
 }
+
+.header-image {
+    background-image: url('star.jpg'); /* Pfad zum Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0; /* Anpassen der oberen und unteren Abstände */
+    color: #fff; /* Weiß für den Text */
+}
+
