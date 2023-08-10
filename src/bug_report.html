@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report erstellen</title>
+</head>
+<body>
+<h1>Bug Report erstellen</h1>
+<form action="create_bug.php" method="post">
+    <label for="title">Titel:</label>
+    <input type="text" id="title" name="title" required><br>
+    <label for="description">Beschreibung:</label>
+    <textarea id="description" name="description" rows="4" required></textarea><br>
+    <input type="hidden" name="reporter_name" value="GreenDevBlood">
+    <button type="submit">Bug melden</button>
+</form>
+</body>
+</html>

@@ -6,8 +6,7 @@ function database_blogpost(): mysqli {
     return new mysqli($envVariables["HOST"], $envVariables["NAME"], $envVariables["PASSWORD"], $envVariables["NAME"]);
 }
 
-/*
-
+function get_config(){
     $propertiesFile = "config.properties";
     $config = parse_ini_file($propertiesFile);
 
@@ -15,6 +14,7 @@ function database_blogpost(): mysqli {
         die("Fehler beim Lesen der Properties-Datei: " . error_get_last()['message']);
     }
 
-*/
+    return $config;
+}
 
 ?>
