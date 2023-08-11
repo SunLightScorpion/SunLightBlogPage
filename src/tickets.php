@@ -15,7 +15,7 @@
 
 <nav>
     <ul>
-        <li><a href="index.php">Hauptseite</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="downloads.html">Downloads</a></li>
         <li><a href="tickets.php" class="active">Ticket Ansicht</a></li>
         <li><a href="ticket_report.php">Ticket erstellen</a></li>
