@@ -13,7 +13,6 @@
     <h1>Homepage</h1>
 </div>
 
-
 <nav>
     <ul>
         <li><a href="index.php" class="active">Hauptseite</a></li>
