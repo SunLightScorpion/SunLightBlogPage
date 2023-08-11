@@ -27,11 +27,13 @@
     <?php
     @include 'util.php';
 
+    $logged_in_user = "GreenDevBlood";
+
     $per_page = 25;
     $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
     $offset = ($current_page - 1) * $per_page;
 
-    $query = mysqli_query(database_blogpost(), "SELECT * FROM bug_reports ORDER BY created_at DESC LIMIT $offset, $per_page");
+    $query = mysqli_query(database_bugtracker(), "SELECT * FROM bug_reports WHERE reporter_name = '$logged_in_user' ORDER BY created_at DESC LIMIT $offset, $per_page");
 
     if ($query) {
         echo "<table>";
@@ -46,7 +48,7 @@
 
         echo "</table>";
 
-        $total_bugs = mysqli_query(database_blogpost(), "SELECT COUNT(*) as total FROM bug_reports");
+        $total_bugs = mysqli_query(database_bugtracker(), "SELECT COUNT(*) as total FROM bug_reports WHERE reporter_name = '$logged_in_user'");
         $total_bugs = mysqli_fetch_assoc($total_bugs)['total'];
         $total_pages = ceil($total_bugs / $per_page);
 
