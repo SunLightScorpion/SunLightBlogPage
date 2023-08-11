@@ -16,9 +16,9 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="tickets.php">Ticket Ansicht</a></li>
         <li><a href="downloads.html">Downloads</a></li>
         <li><a href="ticket_report.php" class="active">Ticket erstellen</a></li>
+        <li><a href="tickets.php">Ticket Ansicht</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
