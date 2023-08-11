@@ -128,7 +128,7 @@ nav ul li a:hover {
 }
 
 .header-image {
-    background-image: url('star.jpg'); /* Pfad zum Hintergrundbild */
+    background-image: url('header_background.jpg'); /* Pfad zum Hintergrundbild */
     background-size: cover;
     background-position: center;
     text-align: center;
