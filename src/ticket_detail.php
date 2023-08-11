@@ -16,7 +16,7 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="tickets.php" class="active">Bug Reports</a></li>
+        <li><a href="tickets.php" class="active">Ticket Ansicht</a></li>
     </ul>
 </nav>
 

@@ -8,13 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $description = nl2br($description);
 
-    $query = mysqli_query(database_blogpost(), "INSERT INTO bug_reports (title, description, reporter_name, status, created_at) 
-                                                 VALUES ('$title', '$description', '$reporter_name', 'Open', NOW())");
+    $query = mysqli_query(database_blogpost(), "INSERT INTO bug_reports (title, description, reporter_name, status, created_at) VALUES ('$title', '$description', '$reporter_name', 'Open', NOW())");
 
     if ($query) {
-        echo "Bug erfolgreich gemeldet!";
+        header("Location: tickets.php");
     } else {
         echo "Fehler beim Melden des Bugs.";
     }
 }
-?>
