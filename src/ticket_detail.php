@@ -1,16 +1,26 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Detail</title>
+    <title>Ticket Details</title>
     <link rel="stylesheet" href="style.css">
     <link href="sunlight.png" rel="icon">
 </head>
 <body>
 
 <div class="header-image">
-    <h1>Bug Detail</h1>
+    <h1>Ticket Details</h1>
 </div>
 
 <nav>
@@ -18,6 +28,11 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="tickets.php" class="active">Ticket Ansicht</a></li>
     </ul>
+    <div class="button-container">
+        <form action="logout.php" method="post">
+            <button type="submit" name="logout" id="logout">Abmelden</button>
+        </form>
+    </div>
 </nav>
 
 <div class="content">
@@ -62,8 +77,30 @@
 <center>
     <form method="post">
         <textarea name="comment" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Add Comment">
+        <input type="submit" value="Add Comment" name="commentButton" id="commentButton">
     </form>
+
+    <?php
+
+    if(isset($_POST["commentButton"])) {
+
+        $bug_id = $_GET['bug_id'];
+
+        $msg = $_POST["comment"];
+        $msg = nl2br($msg);
+
+        if(empty($msg)){
+            return;
+        }
+
+        addCommentToBug($bug_id, $_SESSION["user"], $msg);
+
+        header("Location: ticket_detail.php?bug_id=$bug_id");
+        exit();
+    }
+
+    ?>
+
 </center>
 
 </body>

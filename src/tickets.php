@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,24 +25,28 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="downloads.php">Downloads</a></li>
         <li><a href="tickets.php" class="active">Ticket Ansicht</a></li>
         <li><a href="ticket_report.php">Ticket erstellen</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
+    <div class="button-container">
+        <form action="logout.php" method="post">
+            <button type="submit">Abmelden</button>
+        </form>
+    </div>
 </nav>
 
 <div class="content">
     <?php
     @include 'util.php';
 
-    $logged_in_user = "GreenDevBlood";
-
     $per_page = 25;
     $current_page = $_GET['page'] ?? 1;
     $offset = ($current_page - 1) * $per_page;
 
+    $logged_in_user = $_SESSION["user"];
     $query = mysqli_query(database_blogpost(), "SELECT * FROM bug_reports WHERE reporter_name = '$logged_in_user' ORDER BY created_at DESC LIMIT $offset, $per_page");
 
     if ($query) {

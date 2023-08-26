@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -16,12 +20,25 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a class="active" href="downloads.html">Downloads</a></li>
+        <li><a class="active" href="downloads.php">Downloads</a></li>
         <li><a href="tickets.php">Ticket Ansicht</a></li>
         <li><a href="ticket_report.php">Ticket erstellen</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
+    <?php
+    $loggedIn = isset($_SESSION["user"]);
+
+    if ($loggedIn) {
+        echo '
+    <div class="button-container">
+        <form action="logout.php" method="post">
+            <button type="submit">Abmelden</button>
+        </form>
+    </div>
+    ';
+    } else {
+        echo '
     <div class="button-container">
         <form action="login.php" method="post">
             <button type="submit">Anmelden</button>
@@ -30,6 +47,9 @@
             <button type="submit">Registrieren</button>
         </form>
     </div>
+    ';
+    }
+    ?>
 </nav>
 
 <div class="content">

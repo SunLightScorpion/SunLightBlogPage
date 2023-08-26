@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+@include 'util.php';
+
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -16,18 +28,15 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="downloads.php">Downloads</a></li>
         <li><a href="tickets.php">Ticket Ansicht</a></li>
         <li><a href="ticket_report.php" class="active">Ticket erstellen</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
         <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
     </ul>
     <div class="button-container">
-        <form action="login.php" method="post">
-            <button type="submit">Anmelden</button>
-        </form>
-        <form action="register.php" method="post">
-            <button type="submit">Registrieren</button>
+        <form action="logout.php" method="post">
+            <button type="submit">Abmelden</button>
         </form>
     </div>
 </nav>
@@ -38,7 +47,6 @@
         <input type="text" id="title" name="title" required><br>
         <label for="description">Beschreibung:</label>
         <textarea id="description" name="description" rows="4" required></textarea><br>
-        <input type="hidden" name="reporter_name" value="GreenDevBlood">
         <button type="submit">Bug melden</button>
     </form>
 </div>
