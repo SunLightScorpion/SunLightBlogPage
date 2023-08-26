@@ -40,13 +40,31 @@
                 echo "</div>";
             }
         } else {
-            echo "Bug not found.";
+            echo "Ticket not found.";
         }
     } else {
-        echo "Bug ID not provided.";
+        echo "Ticket ID not provided.";
     }
     ?>
+
+    <div class="comment-section">
+        <h3>Comments</h3>
+        <?php
+        if (isset($_GET['bug_id'])) {
+            $bug_id = $_GET['bug_id'];
+            getBugComments($bug_id);
+        }
+        ?>
+    </div>
+
 </div>
+
+<center>
+    <form method="post">
+        <textarea name="comment" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Add Comment">
+    </form>
+</center>
 
 </body>
 </html>
