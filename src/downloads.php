@@ -75,7 +75,7 @@ session_start();
     <div class="dashboard-item">
         <h2>OpenAPI</h2>
         <p>Beschreibung: Öffentliche API von Developer für Developer</p>
-        <p>Version: 0.3.0</p>
+        <p>Version: 0.9.0</p>
         <a href="OpenAPI.jar" class="invisible-link"></a>
     </div>
 
