@@ -1,6 +1,6 @@
 <?php
 
-function database_blogpost(): mysqli {
+function database_blogpost() : mysqli {
     $envFile = __DIR__ . '/.env';
     $envVariables = parse_ini_string(file_get_contents($envFile));
     return new mysqli($envVariables["HOST"], $envVariables["NAME"], $envVariables["PASSWORD"], $envVariables["NAME"]);
@@ -21,7 +21,7 @@ function getBugComments($ticket_id) : void {
     }
 }
 
-function generateUUIDv4(): string {
+function generateUUIDv4() : string {
     return sprintf(
         '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
         mt_rand(0, 0xffff),
@@ -35,7 +35,7 @@ function generateUUIDv4(): string {
     );
 }
 
-function addCommentToBug($bug_id, $author, $comment) : mysqli_result|bool {
+function addCommentToBug($bug_id, $author, $comment) : mysqli_result | bool {
     $db = database_blogpost();
     $comment = mysqli_real_escape_string($db, $comment);
 
