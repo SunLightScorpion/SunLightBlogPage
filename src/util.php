@@ -6,17 +6,6 @@ function database_blogpost(): mysqli {
     return new mysqli($envVariables["HOST"], $envVariables["NAME"], $envVariables["PASSWORD"], $envVariables["NAME"]);
 }
 
-function get_config(){
-    $propertiesFile = "config.properties";
-    $config = parse_ini_file($propertiesFile);
-
-    if ($config === false) {
-        die("Fehler beim Lesen der Properties-Datei: " . error_get_last()['message']);
-    }
-
-    return $config;
-}
-
 function getBugComments($ticket_id) : void {
     $query = "SELECT * FROM bug_comments WHERE bug_id = '$ticket_id' ORDER BY created_at DESC";
     $result = mysqli_query(database_blogpost(), $query);
@@ -44,10 +33,6 @@ function generateUUIDv4(): string {
         mt_rand(0, 0xffff),
         mt_rand(0, 0xffff)
     );
-}
-
-function println(string $string) : void {
-    echo "$string<br>";
 }
 
 function addCommentToBug($bug_id, $author, $comment) : mysqli_result|bool {
