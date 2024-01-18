@@ -32,7 +32,7 @@ if (!isset($_SESSION["user"])) {
         <li><a href="tickets.php">Ticket Ansicht</a></li>
         <li><a href="ticket_report.php" class="active">Ticket erstellen</a></li>
         <li><a href="https://github.com/SunLightScorpion" target="_blank">Github</a></li>
-        <li><a href="https://discord.gg/DRKeawjsq7" target="_blank">Discord</a></li>
+        <li><a href="https://discord.gg/JuqWbQpMmh" target="_blank">Discord</a></li>
     </ul>
     <div class="button-container">
         <form action="logout.php" method="post">
