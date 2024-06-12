@@ -3,7 +3,11 @@ const http = require('http');
 const path = require('path');
 
 const app = express();
-const PORT = 80;
+
+require('dotenv').config();
+
+const isDevMode = process.env.NODE_ENV === 'development';
+const PORT = isDevMode ? 8080 : 80;
 
 app.use(express.static('public'));
 

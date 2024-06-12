@@ -1,4 +1,7 @@
 # SunLightBlogPage
 Our Homepage, open source
 
-Test Site: **SOON**
+## Env (.env):
+
+NODE_ENV=development
+
