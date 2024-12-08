@@ -20,6 +20,10 @@ app.get('/game', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'game.html'));
 });
 
+app.get('/repo/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'repo', req.params[0]));
+});
+
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
