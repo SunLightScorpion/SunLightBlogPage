@@ -17,6 +17,12 @@ app.get('/', (req, res) => {
 app.get('/game', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'game.html'));
 });
+app.get('/downloads', (req, res) => {
+    res.send("soon");
+});
+app.get('/about', (req, res) => {
+    res.send("soon");
+});
 
 const server = http.createServer(app);
 
