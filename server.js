@@ -20,11 +20,8 @@ app.get('/game', (req, res) => {
 app.get('/downloads', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'downloads.html'));
 });
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'about.html'));
-});
-app.get('/wiki', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'wiki.html'));
+app.get('/minecraft', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'minecraft_server.html'));
 });
 
 const server = http.createServer(app);

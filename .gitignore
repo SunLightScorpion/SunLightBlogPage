@@ -1,4 +1,3 @@
 .env
 /node_modules
-/public/repo/*.jar
-/public/repo/*.pom
+/public/download_files
