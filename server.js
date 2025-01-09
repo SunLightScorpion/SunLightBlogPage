@@ -23,6 +23,9 @@ app.get('/downloads', (req, res) => {
 app.get('/about', (req, res) => {
     res.send("soon");
 });
+app.get('/wiki', (req, res) => {
+    res.send("soon");
+});
 
 const server = http.createServer(app);
 
