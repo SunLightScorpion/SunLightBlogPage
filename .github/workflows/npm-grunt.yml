@@ -22,7 +22,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
-        npm install
-        grunt
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install Grunt CLI
+      run: npm install -g grunt-cli
+
+    - name: Run Grunt tasks
+      run: npx grunt
